@@ -477,6 +477,7 @@ footer {
 
   .card img {
     height: 160px;
+    width:auto;
   }
 
   .card h3 {
