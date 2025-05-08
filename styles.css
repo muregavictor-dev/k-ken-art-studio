@@ -1,35 +1,32 @@
-/* General Reset and Box-Sizing */
+/* Reset & Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: 'Orbitron', sans-serif;
-  background: #05133a;
-  color: #fff;
+  background: #050a30;
+  color: #f0f0f0;
   line-height: 1.6;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
-/* Header Styling */
+/* Header */
 header {
   background: linear-gradient(135deg, #00FFEC, #8A2BE2, #FF5C00);
-  color: #fff;
   padding: 100px 20px;
   text-align: center;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
   border-bottom: 5px solid #FF5C00;
   z-index: 1000;
-  width: 100%;
 }
 
 header h1 {
   font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
+  font-weight: 800;
   color: #fff;
   text-shadow: 0 0 20px #00FFEC, 0 0 40px #8A2BE2;
   animation: fadeIn 1.5s ease-out;
@@ -37,7 +34,7 @@ header h1 {
 
 header p {
   font-size: 1.8rem;
-  color: #ccc;
+  color: #d0d0d0;
   animation: fadeIn 1.7s ease-out;
 }
 
@@ -49,35 +46,87 @@ header img {
   margin-top: 30px;
 }
 
+/* Navigation */
+nav {
+  background: rgba(25, 6, 132, 0.9);
+  padding: 15px;
+  border-bottom: 2px solid #0073e6;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #FF5C00;
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+nav a:hover {
+  color: #8A2BE2;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Headings */
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  color: #00FFEC;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
 /* Slider */
 .slider {
   position: relative;
   overflow: hidden;
-  max-width: 100%;
   margin: 50px auto;
   height: 500px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .slides img {
   width: 100%;
-  object-fit: contain;
-  height: 800px;
-  flex-shrink: 0;
+  height: 500px;
+  object-fit: cover;
 }
 
 .prev, .next {
   position: absolute;
   top: 50%;
   background-color: rgba(0,0,0,0.5);
-  border: none;
   color: white;
   font-size: 2rem;
   padding: 10px;
@@ -91,140 +140,86 @@ header img {
 
 .dots {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .dots span {
   display: inline-block;
-  height: 12px;
   width: 12px;
-  background-color: #bbb;
+  height: 12px;
+  background: #bbb;
   border-radius: 50%;
   margin: 0 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.dots .active { background-color: #333; }
-
-/* Navigation Styling */
-nav {
-  background: rgba(25, 6, 132, 0.85);
-  padding: 15px 10px;
-  border: 2px solid #0073e6;
-  text-align: center;
-}
-
-nav a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  margin: 10px 15px;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
+.dots .active {
   background: #FF5C00;
-  transition: width 0.3s;
-  margin: 5px auto 0;
 }
 
-nav a:hover {
-  color: #8A2BE2;
-  transform: scale(1.05);
-}
-
-nav a:hover::after { width: 100%; }
-
-/* Container */
-.container {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Headings */
-h2 {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #00FFEC;
-  letter-spacing: 2px;
-}
-
-/* Grids */
+/* Grid Sections */
 .services-grid, .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
-  padding: 35px;
+  margin-top: 30px;
+  padding: 0 15px;
 }
 
-/* Card Component */
+/* Card */
 .card {
-  background: #152064;
-  border-radius: 18px;
-  padding: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s, box-shadow 0.4s;
-  border: 3px solid #0073e6;
-  margin: 20px;
+  background: #101c4f;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 2px solid #0073e6;
+  transition: all 0.4s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-10px);
   background: #0758f9;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 2px solid #fcfcfd;
+  transform: translateY(-10px);
+  border-color: #fff;
 }
 
 .card img {
   width: 100%;
-  height: 350px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 15px;
-  border: 3px solid #75b3f1;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .card h3 {
-  color: #f407e4;
   font-size: 2rem;
+  color: #f407e4;
   margin-bottom: 10px;
 }
 
 .card p {
-  color: #ddd;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  color: #ccc;
 }
 
 /* Buttons */
 button,
 input[type="submit"] {
   background: #FF5C00;
+  color: white;
+  padding: 14px 24px;
   border: none;
-  padding: 15px 25px;
-  font-size: 1.4rem;
-  border-radius: 25px;
+  border-radius: 30px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 1.2px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 button:hover,
 input[type="submit"]:hover {
-  background: #650dad;
+  background: #8A2BE2;
   transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Forms */
@@ -245,21 +240,21 @@ form textarea {
   border-radius: 8px;
   background-color: #353B47;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 2px solid #0073e6;
 }
 
 /* Socials */
 .socials {
   margin-top: 20px;
+  text-align: center;
 }
 
 .socials a {
-  text-decoration: none;
   color: #FF5C00;
-  margin-right: 15px;
+  margin: 0 10px;
   font-size: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .socials a:hover {
@@ -269,31 +264,25 @@ form textarea {
 
 /* TikTok Embed */
 .tiktok-embed {
-  margin: 30px auto;
-  border: 2px solid #0073e6;
-  border-radius: 15px;
+  margin: 40px auto;
+  background: #152064;
   padding: 20px;
-  background-color: #152064;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #0073e6;
   max-width: 750px;
-  min-width: 280px;
-  width: 80%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .tiktok-embed section {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
   font-size: 1.1rem;
-  margin-top: 10px;
+  color: #eee;
 }
 
 .tiktok-embed a {
-  color: #000;
-  text-decoration: none;
+  color: #00f;
   font-weight: bold;
-  transition: color 0.3s ease;
-  word-break: break-word;
+  text-decoration: none;
 }
 
 .tiktok-embed a:hover {
@@ -307,54 +296,98 @@ footer {
   text-align: center;
   padding: 25px 15px;
   font-size: 1.3rem;
-  border: 2px solid #0073e6;
+  border-top: 2px solid #0073e6;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(30px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Media Queries */
+/* Responsive */
 @media (max-width: 768px) {
-  header h1 { font-size: 3.2rem; }
-  header p { font-size: 1.4rem; }
-  nav a { font-size: 1.4rem; margin: 5px 10px; }
-  .container { padding: 40px 15px; }
-  h2 { font-size: 2.8rem; }
-  .services-grid, .gallery-grid { grid-template-columns: 1fr; }
-  .card { padding: 20px; }
-  .card img { height: 180px; }
-  button, input[type="submit"] { width: 100%; padding: 15px; }
-  form input, form textarea { font-size: 1.3rem; }
-  footer { font-size: 1.2rem; padding: 20px; }
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .card img {
+    height: 150px;
+  }
 }
 
 @media (max-width: 480px) {
-  header { padding: 60px 15px; }
-  header h1 { font-size: 2.4rem; }
-  header p { font-size: 1.2rem; }
-  header img { width: 120px; margin-top: 20px; }
-  nav a { font-size: 1.2rem; margin: 5px 8px; }
-  .slider, .slides img { height: 280px; }
-  .container { padding: 30px 10px; }
-  h2 { font-size: 2.2rem; }
-  .services-grid, .gallery-grid { padding: 10px; }
-  .card { margin: 10px 0; padding: 15px; }
-  .card img { height: 160px; }
-  .card h3 { font-size: 1.5rem; }
-  .card p { font-size: 1.2rem; }
-  button, input[type="submit"] { font-size: 1.2rem; padding: 12px; margin-top: 10px; }
-  form input, form textarea { font-size: 1.2rem; }
-  .socials a { font-size: 1.2rem; }
-  footer { font-size: 1.1rem; }
-  .tiktok-embed { padding: 5px; font-size: 0.95rem; }
-  .tiktok-embed section { font-size: 1rem; }
+  header {
+    padding: 60px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+
+  .slider {
+    height: 250px;
+  }
+
+  .slides img {
+    height: 250px;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  button,
+  input[type="submit"] {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
 }
