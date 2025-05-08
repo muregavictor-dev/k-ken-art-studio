@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K ART Studio - Capturing Memories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <script src="script.js"></script>
+    <header class="hero">
+        <div class="hero-content">
+          <h1> K Arts</h1>
+          <img src="1659338195020_k 1arts.png" width="250px">
+          <p>Capturing Moments, Creating Memories</p>
+          <a href="contact.html" class="button"><button>Book a Session</button></a>
+        </div>
+      </header>
+      
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="slider">
+    <div class="slides">
+        
+        
+        <img src="C:\Users\AA\OneDrive\Documents\k art studio\retgr5y.jpg" width="350px" length="300px" alt="Photography sample 1">
+        <img src="retgr5y.jpg" width="350px" length="100%" alt="Photography sample 2">
+        <img src="0cb40fdcf8e6de7a4cf546374a788c93.jpg" width="350px" length="100%" alt="Photography sample 3">
+        <img src="8dedcec0b90aede0e6dfe58f4ee223a8.jpg" width="350px" length="100%" alt="Photography sample 4">
+        <img src="9911e1d1f857d908e7415027170c8f82.jpg" width="350px" length="100%" alt="Photography sample 5">
+        <img src="1735715082319.jpg" width="350px" length="100%" alt="Photography sample 6">
+        <img src="2dewd.jpg" width="350px" length="100%" alt="Photography sample 7">
+        <img src="DSC_0593.jpg" width="350px" length="100%" alt="Photography sample 8">
+        <img src="rryr5y5y.jpg" width="350px" length="100%" alt="Photography sample 9">
+        <img src="rtefgtg.jpg" width="350px" length="100%" alt="Photography sample 10">
+        <img src="sdcsdcdsc.jpg" width="350px" length="100%" alt="Photography sample 11">
+        
+        
+        
+        
+        
+        <div class="dots"></div>
+
+        
+       
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<script>
+    
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slides img').length;
+
+    function showSlide(index) {
+        if (index >= totalSlides) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else {
+            currentIndex = index;
+        }
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    setInterval(nextSlide, 3000); // Auto slide every 3 seconds
+
+    
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+
+
+</script>
+
+
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a professional photography studio based in Githongo Town, Kenya. <br>
+                From family photography to wedding shoots, graduations, and baby bump sessions, we create lifelong memories with our expert photography services.<br>
+                 Our mission is to capture the essence of every moment, ensuring that our clients cherish their memories for years to come. 
+                 <br>Founded by passionate photographer <strong>KEN</strong>,  is dedicated to providing high-quality services and customer satisfaction.</p>
+        </section>
+        
+        </div>
+
+        <div class="container">
+        
+            <div class="card">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Family Photography</li>
+                <br>
+                <li>Pregnancy Photoshoot</li>
+                <br>
+               <li> Baby Studio & Baby Bump Photos</li>
+               <br>
+               <li> Wedding Photography</li>
+               <br>
+                <li>Graduation & Birthday Photography</li>
+                <br>
+                <li>Event Photography (e.g., corporate events, parties)</li>
+                <br>
+               <li> Photo Editing Services</li>
+                Custom Packages for clients
+            </ul>
+            </div>
+            
+        
+        <div class="card">
+            <h2>Gallery</h2>
+            <img src="retgr5y.jpg" width="350px"alt="Photography sample 1">
+            
+            <img src="yujuyi.jpg" alt="Photography sample 2">
+            <img src="wsqew.jpg" alt="Photography sample 2">
+            <img src="weqrwer.jpg" alt="Photography sample 2">
+            <img src="sfdsrfr.jpg" alt="Photography sample 2">
+            <img src="sdcsdcdsc.jpg" alt="Photography sample 2">
+            <img src="hhgghg.jpg" alt="Photography sample 2">
+            <img src="fgtretgtr.jpg" alt="Photography sample 2">
+            
+        
+            
+            
+        </div>
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kartsstudio" data-unique-id="kartsstudio" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@kartsstudio?refer=creator_embed">@kartsstudio</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+        
+    
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For bookings, call: <strong>0790449368</strong></p>
+            <p>Email: qenizy@gmail.com</p>
+            <p>Follow us on Facebook: <a href="https://wwio" target="_blank" rel="noopener">K ART Studio</a></p>
+            <p>WhatsApp: <strong>0790449368</strong></p>
+            <!-- Contact form can be added here if applicable -->
+        </div>
+        
+        
+    <footer>
+        <div class="socials">
+            <a href="https://facebook.com/Ken K Arts " target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/K ARTS studios gallary" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:yourname@email.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/254790449368" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@kartsstudio" target="_blank"><i class="fab fa-tiktok"></i></a>
+          
+        </div>
+          
+        <p>&copy; 2025 K ART Studio | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
