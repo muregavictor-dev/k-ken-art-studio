@@ -222,7 +222,7 @@ h2 {
   margin-bottom: 15px;
   border-radius: 15px;
   border: 3px solid #75b3f1;
-  display:row;
+  display:flex;
   
 }
 
