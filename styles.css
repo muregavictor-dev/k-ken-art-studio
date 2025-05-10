@@ -207,11 +207,11 @@ h2 {
 /* Image Responsiveness */
 .card img {
   width: 32%; /* Ensure images fill their container */
-  height: auto; /* Maintain aspect ratio */
+  height: 200px; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure images cover the available space without distortion */
   border-radius: 15px;
   margin-bottom: 15px;
-  border: 3px solid #75b3f1;
+  border: 2px solid #75b3f1;
   item-display:center;
 }
 
