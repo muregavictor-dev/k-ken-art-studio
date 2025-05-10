@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
   const slides = document.querySelector('.slides');
@@ -72,4 +72,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-</script>
+
