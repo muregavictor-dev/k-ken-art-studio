@@ -186,15 +186,6 @@ h2 {
 }
 
 
-.gallery-grid {
-  display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-  margin-left:25px;
-  padding: 35px;
-  
-}
 
 /* Card Component */
 .card {
@@ -213,17 +204,28 @@ h2 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border: 2px solid #fcfcfd;
 }
-
+/* Image Responsiveness */
 .card img {
-  width: auto;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  width: 100%; /* Ensure images fill their container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the available space without distortion */
   border-radius: 15px;
+  margin-bottom: 15px;
   border: 3px solid #75b3f1;
-  display:row;
-  
+}
+
+/* Gallery Grid Images */
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer; /* Pointer to indicate clickability */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Image zoom effect on hover */
 }
 
 .card h3 {
