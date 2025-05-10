@@ -206,7 +206,7 @@ h2 {
 }
 /* Image Responsiveness */
 .card img {
-  width: 60%; /* Ensure images fill their container */
+  width: 40%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure images cover the available space without distortion */
   border-radius: 15px;
