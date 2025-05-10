@@ -206,7 +206,7 @@ h2 {
 }
 /* Image Responsiveness */
 .card img {
-  width: 48%; /* Ensure images fill their container */
+  width: 32%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure images cover the available space without distortion */
   border-radius: 15px;
@@ -217,7 +217,7 @@ h2 {
 
 /* Gallery Grid Images */
 .gallery-grid img {
-  width: 48%;
+  width: 32%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
