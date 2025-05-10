@@ -45,28 +45,6 @@
     <button class="prev" onclick="prevSlide()">&#10094;</button>
     <button class="next" onclick="nextSlide()">&#10095;</button>
 </div>
-
-<script>
-let currentIndex = 0;
-const slides = document.querySelector('.slides');
-const totalSlides = document.querySelectorAll('.slides img').length;
-
-function showSlide(index) { 
-    currentIndex = (index + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-setInterval(nextSlide, 3000);
-</script>
-
 <div class="container">
     <section id="about">
         <h2>About Us</h2>
