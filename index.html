@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
-    <script src="script.js" async></script>
+    
 
 </head>
 <body>
-
-<script src="script.js"></script>
 <header class="hero">
     <div class="hero-content">
       <h1>K Arts</h1>
@@ -53,7 +51,7 @@ let currentIndex = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slides img').length;
 
-function showSlide(index) { -->
+function showSlide(index) { 
     currentIndex = (index + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
@@ -106,8 +104,7 @@ setInterval(nextSlide, 3000);
         <section><a target="_blank" href="https://www.tiktok.com/@kartsstudio?refer=creator_embed">@kartsstudio</a></section>
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
-    <script src="https://www.tiktok.com/embed.js" defer></script>
-
+   
 </div>
 
 <div class="container">
@@ -117,7 +114,8 @@ setInterval(nextSlide, 3000);
     <p>Facebook: <a href="#">K ART Studio</a></p>
     <p>WhatsApp: <strong>0790449368</strong></p>
 </div>
-
+    <script src="script.js"></script>
+</body>
 <footer>
     <div class="socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -129,6 +127,4 @@ setInterval(nextSlide, 3000);
     </div>
     <p>&copy; 2025 K ART Studio | All Rights Reserved</p>
 </footer>
-
-</body>
 </html>
