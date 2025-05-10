@@ -478,9 +478,7 @@ footer {
     padding: 15px;
   }
 
-  .card img {
-    height: 160px;
-  }
+  
 
   .card h3 {
     font-size: 1.5rem;
@@ -510,4 +508,24 @@ footer {
   footer {
     font-size: 1.1rem;
   }
+  @media (max-width: 768px) {
+  .card img,
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
 }
+
+@media (max-width: 480px) {
+  .card img,
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 8px auto;
+  }
+}
+
+
