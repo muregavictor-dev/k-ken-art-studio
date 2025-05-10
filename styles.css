@@ -207,7 +207,7 @@ h2 {
 /* Image Responsiveness */
 .card img {
   width: 32%; /* Ensure images fill their container */
-  height: 400px; /* Maintain aspect ratio */
+  height: 410px; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure images cover the available space without distortion */
   border-radius: 15px;
   margin-bottom: 15px;
@@ -218,7 +218,7 @@ h2 {
 /* Gallery Grid Images */
 .gallery-grid img {
   width: 32%;
-  height: 400px;
+  height: 410px;
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer; /* Pointer to indicate clickability */
@@ -512,7 +512,7 @@ footer {
   .card img,
   .gallery-grid img {
     width: 100%;
-    height: auto;
+    height: 280px;
     display: block;
     margin: 10px auto;
   }
@@ -522,7 +522,7 @@ footer {
   .card img,
   .gallery-grid img {
     width: 100%;
-    height: auto;
+    height: 280px;
     display: block;
     margin: 8px auto;
   }
